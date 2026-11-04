@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MakiTest Assessment & AI Exam Generation Platform
 
-# Run and deploy your AI Studio app
+A full-stack online examination, assessment, and AI-assisted question generation platform built with **React 19**, **TypeScript**, **Node.js / Express (`server.ts`)**, **Relational SQL (`schema.sql` / SQLite)**, and the **Google Gemini API (`@google/genai`)**. Designed as the web assessment and data-collection companion environment for the **MakiTest** proctoring ecosystem.
 
-This contains everything you need to run your app locally.
+## Key Engineering Highlights
+- **Relational Assessment Schema (`schema.sql` & `server.ts`)**: Normalized SQL schema managing `users`, `exams`, `questions`, `attempts`, and `attempt_answers` with foreign-key cascade constraints and unique attempt-question indexing.
+- **Multimodal Gemini AI Exam Generator**: Converts uploaded study documents or raw lecture text into structured multiple-choice assessments via the `@google/genai` SDK.
+- **End-to-End Exam Lifecycle API**: REST endpoints supporting exam creation, timed student exam attempts, automated scoring, and analytics collection.
 
-View your app in AI Studio: https://ai.studio/apps/99c37b3f-c800-40ef-934a-bbfdb68dfd2b
+## Tech Stack
+- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Vite
+- **Backend & Database**: Node.js, Express (`server.ts`), Relational SQL (`better-sqlite3` / `schema.sql`), `@google/genai`
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
+## Local Setup
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Configure `GEMINI_API_KEY` in `.env.local` and run:
+   ```bash
+   npm run dev
+   ```
